@@ -1,6 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
-import "./globals.css";
+
 import { Providers } from "./providers";
 import ThemeToggle from "./components/ThemeToggle";
 
