@@ -1,14 +1,15 @@
 'use client'
+
 import { Icon } from '@iconify/react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
 export default function ThemeToggle() {
-    const [mounted, setMounted] = useState(false)
-    const { setTheme, resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false);
+    const { setTheme, resolvedTheme } = useTheme();
 
-    useEffect(() => setMounted(true), [])
+    useEffect(() => setMounted(true), []);
 
     if (!mounted) return (
         <Image
@@ -20,14 +21,18 @@ export default function ThemeToggle() {
             priority={false}
             title="Loading Light/Dark Toggle"
         />
-    )
+    );
 
-    if (resolvedTheme === 'dark') {
-        return <Icon icon="ph:moon-bold" onClick={() => setTheme('light')} />
-    }
+    const icon = resolvedTheme === 'dark' ? "ph:moon-bold" : "ph:sun-bold";
+    const iconColorClass = resolvedTheme === 'dark' ? 'text-raisin-black' : 'text-yellow-600';
+    const themeChangeHandler = () => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
 
-    if (resolvedTheme === 'light') {
-        return <Icon icon="ph:sun-bold" onClick={() => setTheme('dark')} />
-    }
-};
-
+    return (
+        <button
+            className="fixed top-5 right-5 bg-[#ffffff5d] backdrop-blur-lg p-2 rounded-md shadow-lg cursor-pointer"
+            onClick={themeChangeHandler}
+        >
+            <Icon icon={icon} className={iconColorClass} />
+        </button>
+    );
+}
