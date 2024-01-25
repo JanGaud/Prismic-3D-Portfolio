@@ -15,8 +15,8 @@ const config: Config = {
         "raisin-white": "#E5DEE2",
         "persian-red": "#C3423F",
         "yellow-green": "#9BC53D",
-        maize: "#FDE74C",
-        aero: "#5BC0EB",
+        "maize": "#FDE74C",
+        "aero": "#5BC0EB",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
