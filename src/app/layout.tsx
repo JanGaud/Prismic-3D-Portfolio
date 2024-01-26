@@ -4,6 +4,7 @@ import { Lexend } from "next/font/google";
 
 import { Providers } from "./providers";
 import ThemeToggle from "./components/ThemeToggle";
+import Header from "./components/Header";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`bg-raisin-white text-raisin-black dark:bg-raisin-black dark:text-raisin-white ${lexend.className}`}
       >
+        <Header />
         <Providers>
           <ThemeToggle />
           {children}
