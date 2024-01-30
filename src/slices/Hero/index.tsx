@@ -74,19 +74,19 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center min-h-[7rem] md:h-fit">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="mb-8 drop-shadow-xl text-[clamp(3rem,16vmin,20rem)] font-extrabold leading-none tracking-tighter"
+            className="mb-8 drop-shadow-xl font-extrabold leading-none tracking-tighter"
             aria-label={
               slice.primary.first_name + " " + slice.primary.last_name
             }
           >
-            <span className="block text-aero">
+            <span className="block text-aero text-5xl lg:text-[100px] xl:text-[120px]">
               {renderLetters(slice.primary.first_name, "first")}
             </span>
-            <span className="-mt-[.2em] block text-aero">
+            <span className="mt-[.06em] block text-aero text-4xl lg:text-[80px] xl:text-[100px]">
               {renderLetters(slice.primary.last_name, "last")}
             </span>
           </h1>

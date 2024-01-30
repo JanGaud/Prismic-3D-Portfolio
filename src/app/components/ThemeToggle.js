@@ -29,11 +29,10 @@ export default function ThemeToggle() {
 
     return (
         <button
-            className="fixed z-20 bottom-4 right-4 md:top-4 md:bottom-[auto] bg-[#ffffffa8] backdrop-blur-lg p-2 rounded-md shadow-lg cursor-pointer"
+            className="fixed z-20 bottom-4 right-4 md:top-4 rounded-full md:bottom-[auto] bg-[#ffffff8c] backdrop-blur-lg p-2 shadow-lg cursor-pointer"
             onClick={themeChangeHandler}
         >
-            <Icon icon={icon} className={`${iconColorClass} w-6 h-6`} />
+            <Icon icon={icon} className={`${iconColorClass} w-8 h-8`} />
         </button>
-
     );
 }

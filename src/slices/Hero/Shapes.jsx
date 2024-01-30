@@ -25,7 +25,7 @@ export default function Shapes() {
             blur={1}
             far={9}
           />
-          <Environment preset="studio"/>
+          <Environment preset="studio" />
         </Suspense>
       </Canvas>
     </div>
@@ -62,7 +62,7 @@ function Geometries() {
   ];
 
   const materials = [
-    new THREE.MeshNormalMaterial({ metalness: 0.5, roughness: 0.2 }),
+    new THREE.MeshNormalMaterial(), // Removed metalness and roughness
     new THREE.MeshStandardMaterial({ color: "#C3423F", roughness: 0.3 }),
     new THREE.MeshStandardMaterial({ color: "#9BC53D", roughness: 0.2 }),
     new THREE.MeshStandardMaterial({
